@@ -93,6 +93,7 @@ let activeDeckIndex = 0;
 const deckDurations = [3000, 1500, 1500];
 let deckTimer = null;
 let deckIsPaused = false;
+let deckPointerInside = false;
 let deckStartedAt = 0;
 let deckRemaining = deckDurations[0];
 
@@ -207,15 +208,21 @@ if (deck && deckSlides.length) {
     }
   });
 
-  deck.addEventListener("pointerenter", pauseDeckAutoplay);
-  deck.addEventListener("pointerleave", resumeDeckAutoplay);
+  deck.addEventListener("pointerenter", () => {
+    deckPointerInside = true;
+    pauseDeckAutoplay();
+  });
+  deck.addEventListener("pointerleave", () => {
+    deckPointerInside = false;
+    if (!deck.contains(document.activeElement) && !document.hidden) resumeDeckAutoplay();
+  });
   deck.addEventListener("focusin", pauseDeckAutoplay);
   deck.addEventListener("focusout", () => {
-    if (!deck.contains(document.activeElement)) resumeDeckAutoplay();
+    if (!deck.contains(document.activeElement) && !deckPointerInside && !document.hidden) resumeDeckAutoplay();
   });
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) pauseDeckAutoplay();
-    else resumeDeckAutoplay();
+    else if (!deckPointerInside && !deck.contains(document.activeElement)) resumeDeckAutoplay();
   });
 
   window.addEventListener("resize", updateDeckHeight);
