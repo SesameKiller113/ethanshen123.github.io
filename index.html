@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ethan Shen | Full Stack Software Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio for Ethan Shen, a full stack software engineer building frontend-heavy, API-driven, and GenAI-enabled product systems."
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href='data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"%3E%3Crect width="64" height="64" rx="8" fill="%23070808"/%3E%3Cpath d="M15 16h34v8H24v8h20v8H24v8h26v8H15V16z" fill="%23d8b76b"/%3E%3Cpath d="M14 12h36" stroke="%2382e7c9" stroke-width="3"/%3E%3C/svg%3E'
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas class="signal-canvas" id="signalCanvas" aria-hidden="true"></canvas>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Ethan Shen home">
+        <span class="brand-mark">ES</span>
+        <span>Ethan Shen</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#work" data-nav-slide="0">Work</a>
+        <a href="#work" data-nav-slide="1">Experience</a>
+        <a href="#work" data-nav-slide="2">Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav-cta" href="mailto:ethanshen1033@gmail.com">Email</a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow">Full Stack Engineer / GenAI Product Systems</p>
+          <h1 id="hero-title">Ethan Shen</h1>
+          <p class="hero-lede">
+            I build polished, high-traffic product surfaces where React, TypeScript,
+            GraphQL, and AI workflows meet production discipline.
+          </p>
+          <div class="hero-actions" aria-label="Primary links">
+            <a class="button primary" href="mailto:ethanshen1033@gmail.com">Start a conversation</a>
+            <a class="button secondary" href="https://www.linkedin.com/in/ethan-shen-82488a388" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+          <div class="hero-stack" aria-label="Core technologies">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>GraphQL</span>
+            <span>Node.js</span>
+            <span>OpenAI</span>
+            <span>AWS</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-reveal data-tilt>
+          <div class="portrait-frame">
+            <img src="assets/ethan-shen.png" alt="Portrait of Ethan Shen" />
+            <div class="frame-line top"></div>
+            <div class="frame-line bottom"></div>
+          </div>
+          <div class="signal-panel" aria-label="Current focus">
+            <span>Currently shaping products</span>
+            <strong>AI product workflows, knowledge discovery, and enterprise-grade platform systems.</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="metrics" aria-label="Career highlights">
+        <article class="metric" data-reveal>
+          <strong><span data-count="8" data-suffix="+">8+</span></strong>
+          <span>Years building product systems</span>
+        </article>
+        <article class="metric" data-reveal>
+          <strong><span data-count="27" data-suffix="%">27%</span></strong>
+          <span>Fewer repeated lookup paths in WIBEY and Loop flows</span>
+        </article>
+        <article class="metric" data-reveal>
+          <strong><span data-count="35" data-suffix="%">35%</span></strong>
+          <span>Reduction in hallucinated travel Q&amp;A responses</span>
+        </article>
+        <article class="metric" data-reveal>
+          <strong><span data-count="91">91</span></strong>
+          <span>Lighthouse accessibility score lifted from 74</span>
+        </article>
+      </section>
+
+      <section class="section portfolio-deck" id="work" data-deck aria-labelledby="deck-title">
+        <div class="deck-shell" data-reveal>
+          <div class="deck-topline">
+            <div>
+              <p class="eyebrow">Portfolio Pages</p>
+              <h2 id="deck-title">Compact carousel, strongest signals first.</h2>
+            </div>
+            <div class="deck-controls" aria-label="Portfolio carousel controls">
+              <button class="deck-arrow" type="button" data-deck-prev aria-label="Previous portfolio page">&larr;</button>
+              <div class="deck-tabs" role="tablist" aria-label="Portfolio pages">
+                <button id="tab-work" type="button" role="tab" aria-selected="true" aria-controls="panel-work" data-deck-tab="0">Work</button>
+                <button id="tab-experience" type="button" role="tab" aria-selected="false" aria-controls="panel-experience" data-deck-tab="1">Experience</button>
+                <button id="tab-stack" type="button" role="tab" aria-selected="false" aria-controls="panel-stack" data-deck-tab="2">Stack</button>
+              </div>
+              <button class="deck-arrow" type="button" data-deck-next aria-label="Next portfolio page">&rarr;</button>
+            </div>
+          </div>
+
+          <div class="deck-viewport" data-deck-viewport>
+            <article class="deck-slide is-active" id="panel-work" role="tabpanel" aria-labelledby="tab-work" data-deck-slide>
+              <div class="deck-grid">
+                <article class="showcase-card deck-card" data-tilt>
+                  <span class="card-index">01</span>
+                  <h3>WIBEY Canvas Mode</h3>
+                  <p>
+                    Built a micro frontend for Walmart's internal developer AI assistant,
+                    turning GenAI responses into editable documents, tables, diagrams,
+                    and reusable structured artifacts.
+                  </p>
+                  <div class="card-meta">
+                    <span>Tiptap</span>
+                    <span>Mermaid</span>
+                    <span>Chart.js</span>
+                    <span>GraphQL</span>
+                  </div>
+                </article>
+
+                <div class="mini-work-list">
+                  <article class="deck-card mini-work">
+                    <span>02</span>
+                    <h3>Sam's Club PLP Discovery</h3>
+                    <p>Search filters, product cards, CTA states, sort controls, recommendation rails, Apollo caching, and rollout flags.</p>
+                  </article>
+                  <article class="deck-card mini-work">
+                    <span>03</span>
+                    <h3>Travel GraphRAG Assistant</h3>
+                    <p>Neo4j, vector retrieval, embeddings, Cypher graph queries, multilingual chat, and grounded travel answers.</p>
+                  </article>
+                  <article class="deck-card mini-work">
+                    <span>04</span>
+                    <h3>Cloud Security Dashboards</h3>
+                    <p>Risk views for CVE, CVSS, cloud exposure, remediation timelines, severity heatmaps, and analyst workflows.</p>
+                  </article>
+                </div>
+              </div>
+            </article>
+
+            <article class="deck-slide" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience" data-deck-slide aria-hidden="true">
+              <div class="career-list">
+                <article class="career-row">
+                  <span class="role-time">Nov 2025 - Present</span>
+                  <div>
+                    <h3>Senior Software Engineer / Walmart Global Tech</h3>
+                    <p>GenAI assistant workflows, editable canvas artifacts, Loop discovery, GraphQL contracts, and Sam's Club PLP experiences.</p>
+                  </div>
+                </article>
+                <article class="career-row">
+                  <span class="role-time">Sep 2024 - Oct 2025</span>
+                  <div>
+                    <h3>React Developer / GenAI / Okta Identity Cloud</h3>
+                    <p>Onboarding, employee management, document review, AI summaries, support chat, and permission-aware services.</p>
+                  </div>
+                </article>
+                <article class="career-row">
+                  <span class="role-time">Jan 2024 - Aug 2024</span>
+                  <div>
+                    <h3>UI React Engineer Co-op / Tenable</h3>
+                    <p>Security dashboards, micro frontends, risk heatmaps, Storybook components, and accessibility improvements.</p>
+                  </div>
+                </article>
+                <article class="career-row">
+                  <span class="role-time">May 2021 - Nov 2023</span>
+                  <div>
+                    <h3>Full Stack Developer / Oortech LLC</h3>
+                    <p>Travel-domain Q&amp;A product with React, Node.js, Flask, MongoDB, Neo4j, GraphRAG, admin tooling, and AWS delivery.</p>
+                  </div>
+                </article>
+                <article class="career-row">
+                  <span class="role-time">Sep 2018 - Apr 2021</span>
+                  <div>
+                    <h3>Software Engineer Intern / Agricultural Bank of China</h3>
+                    <p>Employee-management and reporting workflows with Java, Spring Boot, Vue 2, Flask utilities, RBAC, LDAP, and migrations.</p>
+                  </div>
+                </article>
+              </div>
+            </article>
+
+            <article class="deck-slide" id="panel-stack" role="tabpanel" aria-labelledby="tab-stack" data-deck-slide aria-hidden="true">
+              <div class="stack-mosaic">
+                <article class="stack-tile">
+                  <h3>Frontend</h3>
+                  <p>React, Angular, TypeScript, Redux Toolkit, React Router, Material UI, Chakra UI, Ant Design, Tailwind CSS, Tiptap, Chart.js, Mermaid.</p>
+                </article>
+                <article class="stack-tile">
+                  <h3>Backend and Data</h3>
+                  <p>Node.js, Express.js, Flask, Java, Spring Boot, REST APIs, GraphQL/Apollo, MongoDB, PostgreSQL, Redis, Neo4j, JWT, OAuth2, RBAC.</p>
+                </article>
+                <article class="stack-tile">
+                  <h3>AI and Product Intelligence</h3>
+                  <p>GraphRAG, LangChain, OpenAI API, prompt engineering, vector search, feedback analytics, LLM evaluation, GitHub Copilot workflows.</p>
+                </article>
+                <article class="stack-tile">
+                  <h3>Delivery</h3>
+                  <p>AWS, Docker, Kubernetes, Nginx, Cloudflare CDN, GitHub Actions, Jenkins, CI/CD, release management, feature flags, Core Web Vitals, WCAG.</p>
+                </article>
+              </div>
+              <div class="credential-row">
+                <span class="credential-pill">University of Illinois Urbana-Champaign / M.C.S. Computer Science</span>
+                <span class="credential-pill">Troy University / B.S. Computer Science</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="deck-status" aria-live="polite">
+            <span data-deck-status>Page 1 of 3</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" data-reveal>
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Let's build product surfaces that look calm because the engineering is solid.</h2>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:ethanshen1033@gmail.com">ethanshen1033@gmail.com</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/ethan-shen-82488a388" target="_blank" rel="noreferrer">LinkedIn Profile</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Ethan Shen</span>
+      <span>Full Stack Software Engineer</span>
+      <span id="year">2026</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
